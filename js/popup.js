@@ -816,7 +816,7 @@ function setupFeatureSearch(menu) {
 
     function shouldSkip(el) {
         // Skip overlays / scrapped containers that aren't real features
-        if (el.closest('#submit-popup, #browser-settings-popup, #opt-in, #card-edit-menu')) return true;
+        if (el.closest('#submit-popup, #browser-settings-popup, #card-edit-menu')) return true;
         // Skip statically-hidden containers but keep dynamically-hidden sub-options.
         let node = el;
         while (node && node !== document.body) {
@@ -1908,10 +1908,6 @@ function setup() {
             e.target.textContent = "Show";
         }
     });
-
-    // activate theme browser opt out
-
-    // activate theme browser opt in
 
     document.querySelectorAll(".theme-sort-btn").forEach(btn => {
         btn.addEventListener("click", (e) => {

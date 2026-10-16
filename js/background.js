@@ -101,8 +101,6 @@ chrome.runtime.onInstalled.addListener(function () {
             "reminders": [],
             "reminder_count": 1,
             "multi_remind": false,
-            "id": "",
-            "new_browser": null,
             "gpa_calc_cumulative": false,
             "gpa_calc_weighted": true,
             "browser_show_likes": false,
