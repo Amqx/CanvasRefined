@@ -110,6 +110,19 @@ To install, run, and build with this repository locally,
 - Click the "Load upacked" button in the header.
 - When prompted to open a file, select the root directory of this repository.
 
+### Safari (macOS / iOS)
+
+The Xcode project in `safari/` wraps the extension in a host app. It references the
+extension files at the repository root, so no copying is needed after edits.
+
+- Open `safari/Canvas Refined/Canvas Refined.xcodeproj` in Xcode.
+- Select the `Canvas Refined (macOS)` or `Canvas Refined (iOS)` scheme, set your signing team, and run.
+- macOS: if building without a team, enable Safari > Settings > Advanced > "Show features for web developers",
+  then Develop > "Allow Unsigned Extensions" (resets each Safari launch).
+- Enable Canvas Refined in Safari > Settings > Extensions and allow it on your Canvas domain.
+- If `manifest.json` gains new top-level files or folders, add them to the extension targets' resources
+  (or regenerate with `xcrun safari-web-extension-converter --rebuild-project`).
+
 ### How to use
 
 - Once the extension is installed, navigate to your institution's Canvas homepage.
